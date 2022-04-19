@@ -1,37 +1,25 @@
-import * as fs from "fs";
-import { TaskFunction } from "puppeteer-cluster/dist/Cluster";
-import { Detail, Job } from "../cluster/declarations";
-import { writeFileSync } from "../cluster/utils";
+import * as fs from 'fs';
+import { TaskFunction } from 'puppeteer-cluster/dist/Cluster';
+import { Job } from '../../declarations';
+import { writeFileSync } from '../../utils';
+import { pageFunctions } from './pageFns';
 
 export const getItem: TaskFunction<Job, void> = async ({ page, data }) => {
   const {
-    listItem: { filePath, link },
+    listItem: { filePath: relativeFilePath, link },
+    params: { listPage, detailPage },
   } = data;
 
+  const filePath = `build/${relativeFilePath}`;
   if (fs.existsSync(filePath)) {
-    console.log("skip");
+    console.log(`The file exists: ${filePath}, skip it`);
   } else {
     await page.goto(link);
     const detail = await page.evaluate(pageFunctions.getItem);
-    writeFileSync(filePath, { ...detail, ...data });
+    writeFileSync(filePath, { detail, ...data });
+    console.log(
+      `The detail in ${detailPage.index} / ${detailPage.total} ` +
+        `: ${listPage.index} / ${listPage.total} is fetched`
+    );
   }
-};
-
-export const pageFunctions = {
-  getItem: (): Detail => {
-    const $workContent = document.querySelector<HTMLElement>(
-      ".job-description__content"
-    );
-    const $otherRequirement = document.querySelector<HTMLElement>(
-      ".job-requirement > .job-requirement p"
-    );
-    const $welfare = document.querySelector<HTMLElement>(
-      ".benefits-description"
-    );
-    return {
-      workContent: $workContent?.innerText,
-      otherRequirement: $otherRequirement?.innerText,
-      welfare: $welfare?.innerText,
-    };
-  },
 };

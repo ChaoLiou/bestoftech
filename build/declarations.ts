@@ -1,7 +1,10 @@
 export interface Job {
   params: Params;
   listItem?: ListItem;
-  detail?: Detail;
+  // detail?: Detail;
+  workContent: string;
+  otherRequirement: string;
+  welfare: string;
 }
 
 export interface Params {
@@ -38,3 +41,10 @@ export interface PageParams {
   total: number;
   index: number;
 }
+
+export interface Tech {
+  name: string;
+  list: string[];
+}
+
+export type UniversalTech = Tech | string;

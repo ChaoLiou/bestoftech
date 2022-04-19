@@ -1,5 +1,5 @@
 import { Cluster } from "puppeteer-cluster";
-import { Job } from "./declarations";
+import { Job } from "../../declarations";
 import { initErrorHandler } from "./errorHandler";
 
 export class ClusterSingleton {

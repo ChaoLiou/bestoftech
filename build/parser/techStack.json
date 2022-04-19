@@ -1,787 +1,628 @@
 [
-    "hybrid mobile app",
-    "automated testing",
-    "high availability",
-    "google analytics",
-    "entity framework",
-    "micro-services",
-    "deep learning",
-    "auto scaling",
-    "coffeescript",
-    "instruments",
-    "codeigniter",
-    "illustrator",
-    "prometheus",
-    "blockchain",
-    "serverless",
-    "typescript",
-    "tensorflow",
-    "clickhouse",
-    "wireframe",
-    "prototype",
-    "container",
-    "wordpress",
-    "memcached",
-    "bitbucket",
-    "openstack",
-    "photoshop",
-    "hibernate",
-    "bluetooth",
-    "cocoapods",
-    "terraform",
-    "goroutine",
-    "firestore",
-    "big data",
-    "identity",
-    "selenium",
-    "semantic",
-    "material",
-    "markdown",
-    "rocketmq",
-    "electron",
-    "solidity",
-    "dynamodb",
-    "firebase",
-    "memcache",
-    "fastlane",
-    "retrofit",
-    "backbone",
-    "protobuf",
-    "carthage",
-    "fastapi",
-    "storage",
-    "cluster",
-    "next.js",
-    "firefox",
-    "xamarin",
-    "jetpack",
-    "grafana",
-    "webform",
-    "postman",
-    "eclipse",
-    "tableau",
-    "servlet",
-    "phalcon",
-    "flutter",
-    "mybatis",
-    "layabox",
-    "sidekiq",
-    "mariadb",
-    "laravel",
-    "webpack",
-    "express",
-    "cypress",
-    "graphql",
-    "swagger",
-    "jenkins",
-    "ansible",
-    "signalr",
-    "pytorch",
-    "phaser",
-    "chrome",
-    "appium",
-    "jmeter",
-    "rxjava",
-    "webrtc",
-    "kanban",
-    "devops",
-    "dapper",
-    "arcgis",
-    "zeplin",
-    "liquid",
-    "struts",
-    "ibatis",
-    "gradle",
-    "sqlite",
-    "athena",
-    "lambda",
-    "tappay",
-    "apollo",
-    "tomcat",
-    "heroku",
-    "django",
-    "celery",
-    "apache",
-    "kotlin",
-    "hadoop",
-    "dagger",
-    "puppet",
-    "tolua",
-    "istio",
-    "realm",
-    "odata",
-    "ionic",
-    "cache",
-    "grunt",
-    "oauth",
-    "slack",
-    "toeic",
-    "figma",
-    "macos",
-    "shark",
-    "xcode",
-    "nosql",
-    "maven",
-    "egret",
-    "rspec",
-    "swift",
-    "rdbms",
-    "nginx",
-    "babel",
-    "webgl",
-    "redis",
-    "mocha",
-    "shell",
-    "flask",
-    "azure",
-    "junit",
-    "kafka",
-    "spark",
-    "caffe",
-    "scala",
-    "laya",
-    "jstl",
-    "rust",
-    "grpc",
-    "yarn",
-    "lamp",
-    "bash",
-    "linq",
-    "json",
-    "mock",
-    "j2ee",
-    "jira",
-    "dapp",
-    "perl",
-    "gulp",
-    "cors",
-    "ajax",
-    "flux",
-    "nuxt",
-    "web3",
-    "jest",
-    "mvvm",
-    "mqtt",
-    "nats",
-    "dart",
-    "chef",
-    "jdbc",
-    "vim",
-    "cdn",
-    "dns",
-    "iis",
-    "etl",
-    "ios",
-    "ftp",
-    "cms",
-    "w3c",
-    "pwa",
-    "usb",
-    "gke",
-    "eks",
-    "cvs",
-    "pos",
-    "iot",
-    "elk",
-    "aop",
-    "ioc",
-    "xml",
-    "jsp",
-    "orm",
-    "bdd",
-    "db2",
-    "ood",
-    "mvp",
-    "seo",
-    "sns",
-    "dom",
-    "jwt",
-    "rds",
-    "npm",
-    "uml",
-    "lua",
-    "ddd",
-    "tdd",
-    "mvc",
-    "erp",
-    "sap",
-    "ses",
-    "dsp",
-    "ssl",
-    "yii",
-    "ble",
-    "ai",
-    "ef",
-    "d3",
-    "qt",
-    {
-        "name": "spring/spring mvc/spring cloud/spring boot",
-        "list": [
-            "spring boot",
-            "springboot",
-            "spring data jpa",
-            "spring mvc",
-            "springmvc",
-            "spring cloud",
-            "springcloud",
-            "spring",
-            "jpa"
-        ]
-    },
-    {
-        "name": "aws/ec2/elb/s3/cloudwatch/fargate/ecs/ecr",
-        "list": [
-            "aws",
-            "ec2",
-            "elb",
-            "ecs",
-            "ecr",
-            "s3",
-            "fargate",
-            "cloudwatch",
-            "amazon web services",
-            "amazon sns",
-            "amazon"
-        ]
-    },
-    {
-        "name": "preprocessor/less/sass/scss",
-        "list": [
-            "preprocessor",
-            "less",
-            "sass",
-            "scss"
-        ]
-    },
-    {
-        "name": "reactjs/redux/react native",
-        "list": [
-            "react native",
-            "react-native",
-            "reactnative",
-            "redux",
-            "reactjs",
-            "react"
-        ]
-    },
-    {
-        "name": "elk/elasticsearch/kibana",
-        "list": [
-            "elk",
-            "elasticsearch",
-            "elastic-search",
-            "kibana",
-            "elasticache"
-        ]
-    },
-    {
-        "name": "functional programming",
-        "list": [
-            "functional programming",
-            "functional",
-            "fp"
-        ]
-    },
-    {
-        "name": "server-side rendering",
-        "list": [
-            "server-side rendering",
-            "ssr"
-        ]
-    },
-    {
-        "name": "css layout/grid/flex",
-        "list": [
-            "grid",
-            "flexbox",
-            "flex"
-        ]
-    },
-    {
-        "name": "dependency injection",
-        "list": [
-            "dependency injection",
-            "di"
-        ]
-    },
-    {
-        "name": "git/github/gitlab",
-        "list": [
-            "git flow",
-            "github",
-            "gitlab",
-            "gitflow",
-            "git"
-        ]
-    },
-    {
-        "name": "integration test",
-        "list": [
-            "integration test",
-            "integration tests",
-            "integrationtest"
-        ]
-    },
-    {
-        "name": "machine learning",
-        "list": [
-            "machine learning",
-            "ml"
-        ]
-    },
-    {
-        "name": "end-to-end test",
-        "list": [
-            "e2e test",
-            "end-to-end testing",
-            "end-to-end tests",
-            "end-to-end test",
-            "end-to-end"
-        ]
-    },
-    {
-        "name": "design patterns",
-        "list": [
-            "design patterns",
-            "design pattern",
-            "設計模式"
-        ]
-    },
-    {
-        "name": "c# asp.net/core",
-        "list": [
-            "visual c#",
-            "c#",
-            "asp.net core",
-            "asp .net",
-            ".net core",
-            ".netcore",
-            "asp.net",
-            ".net"
-        ]
-    },
-    {
-        "name": "load balancing",
-        "list": [
-            "load balancing",
-            "load balance"
-        ]
-    },
-    {
-        "name": "cocos/cocoapod",
-        "list": [
-            "cocoapod",
-            "cocos creator",
-            "cocos"
-        ]
-    },
-    {
-        "name": "php/composer",
-        "list": [
-            "php",
-            "composer"
-        ]
-    },
-    {
-        "name": "shell script",
-        "list": [
-            "shell script",
-            "shell"
-        ]
-    },
-    {
-        "name": "microservice",
-        "list": [
-            "micro service",
-            "micro services",
-            "micro-service",
-            "microservice",
-            "microservices"
-        ]
-    },
-    {
-        "name": "multi-thread",
-        "list": [
-            "multi-thread",
-            "multithreading",
-            "multithread",
-            "multitasking"
-        ]
-    },
-    {
-        "name": "agile/scrum",
-        "list": [
-            "agile",
-            "scrum"
-        ]
-    },
-    {
-        "name": "restful api",
-        "list": [
-            "restful api",
-            "rest api",
-            "restfulapi",
-            "restful"
-        ]
-    },
-    {
-        "name": "ecma script",
-        "list": [
-            "ecma script",
-            "ecmascript",
-            "es2016",
-            "es2015",
-            "esnext",
-            "es5",
-            "es6",
-            "es3/6",
-            "es7",
-            "es8"
-        ]
-    },
-    {
-        "name": "cassandradb",
-        "list": [
-            "cassandradb",
-            "cassandra"
-        ]
-    },
-    {
-        "name": "objective-c",
-        "list": [
-            "objective-c",
-            "objective c",
-            "object c"
-        ]
-    },
-    {
-        "name": "mssql/mysql",
-        "list": [
-            "oracle",
-            "mysql",
-            "microsoft sql",
-            "ms sqlserver",
-            "sql server",
-            "sqlserver",
-            "ms sql",
-            "ms tsql",
-            "mssql",
-            "ms-sql",
-            "msql",
-            "t-sql",
-            "sql"
-        ]
-    },
-    {
-        "name": "code review",
-        "list": [
-            "codereviwe",
-            "code review"
-        ]
-    },
-    {
-        "name": "tcp/udp/ip",
-        "list": [
-            "tcp/ip",
-            "tcp",
-            "udp"
-        ]
-    },
-    {
-        "name": "javascript",
-        "list": [
-            "java script",
-            "javascript"
-        ]
-    },
-    {
-        "name": "kubernetes",
-        "list": [
-            "kubernetes",
-            "k8s",
-            "kubernate",
-            "kuberenetes",
-            "kubernates"
-        ]
-    },
-    {
-        "name": "clean code",
-        "list": [
-            "clean code",
-            "clean coding",
-            "clean"
-        ]
-    },
-    {
-        "name": "unix/linux",
-        "list": [
-            "unix",
-            "linux"
-        ]
-    },
-    {
-        "name": "postgresql",
-        "list": [
-            "postgresql",
-            "postgres",
-            "postgre",
-            "postgesql"
-        ]
-    },
-    {
-        "name": "vuejs/vuex",
-        "list": [
-            "vue",
-            "vuejs",
-            "vuex"
-        ]
-    },
-    {
-        "name": "ant design",
-        "list": [
-            "ant design",
-            "antd"
-        ]
-    },
-    {
-        "name": "rabbit mq",
-        "list": [
-            "rabbit mq",
-            "rabbitmq",
-            "mq"
-        ]
-    },
-    {
-        "name": "angularjs",
-        "list": [
-            "angular",
-            "angularjs",
-            "angular7"
-        ]
-    },
-    {
-        "name": "unit test",
-        "list": [
-            "unit testing",
-            "unit tests",
-            "unit test",
-            "unittest",
-            "unit-test",
-            "unit-testing",
-            "unit"
-        ]
-    },
-    {
-        "name": "bootstrap",
-        "list": [
-            "bootstrap",
-            "boostrap"
-        ]
-    },
-    {
-        "name": "thinkphp",
-        "list": [
-            "thinkphp5",
-            "thinkphp"
-        ]
-    },
-    {
-        "name": "three.js",
-        "list": [
-            "three.js",
-            "threejs"
-        ]
-    },
-    {
-        "name": "ruby/ror",
-        "list": [
-            "ruby on rails",
-            "ruby",
-            "rails",
-            "ror"
-        ]
-    },
-    {
-        "name": "english",
-        "list": [
-            "english",
-            "英文",
-            "英語"
-        ]
-    },
-    {
-        "name": "android",
-        "list": [
-            "android",
-            "andriod",
-            "andorid",
-            "安卓"
-        ]
-    },
-    {
-        "name": "c/c\\+\\+",
-        "list": [
-            "c/c\\+\\+",
-            "vc\\+\\+",
-            "c\\+\\+",
-            "c 語言"
-        ]
-    },
-    {
-        "name": "unity3d",
-        "list": [
-            "unity3d",
-            "unity"
-        ]
-    },
-    {
-        "name": "mongodb",
-        "list": [
-            "mongodb",
-            "mongo",
-            "mangodb"
-        ]
-    },
-    {
-        "name": "vb.net",
-        "list": [
-            "vb.net",
-            "vb"
-        ]
-    },
-    {
-        "name": "python",
-        "list": [
-            "python3",
-            "python"
-        ]
-    },
-    {
-        "name": "nodejs",
-        "list": [
-            "nodejs",
-            "node"
-        ]
-    },
-    {
-        "name": "golang",
-        "list": [
-            "golang",
-            "go"
-        ]
-    },
-    {
-        "name": "socket",
-        "list": [
-            "web socket",
-            "websocket",
-            "socket.io",
-            "socket"
-        ]
-    },
-    {
-        "name": "docker",
-        "list": [
-            "docker",
-            "docker compose",
-            "docker-compose",
-            "dockerfile"
-        ]
-    },
-    {
-        "name": "jquery",
-        "list": [
-            "jquery",
-            "jqeury"
-        ]
-    },
-    {
-        "name": "extjs",
-        "list": [
-            "extjs",
-            "ext js"
-        ]
-    },
-    {
-        "name": "java",
-        "list": [
-            "java ee",
-            "java"
-        ]
-    },
-    {
-        "name": "cicd",
-        "list": [
-            "continuous integration",
-            "continuous deployment",
-            "continuous delivery",
-            "ci",
-            "cd",
-            "ci/cd",
-            "cicd",
-            "ci",
-            "cd"
-        ]
-    },
-    {
-        "name": "html",
-        "list": [
-            "h5",
-            "html5",
-            "xhtml",
-            "html"
-        ]
-    },
-    {
-        "name": "oop",
-        "list": [
-            "object oriented",
-            "oop",
-            "object-oriented",
-            "物件導向"
-        ]
-    },
-    {
-        "name": "css",
-        "list": [
-            "ｃｓｓ",
-            "css3",
-            "css"
-        ]
-    },
-    {
-        "name": "rwd",
-        "list": [
-            "rwd",
-            "responsive web design",
-            "responsive ui",
-            "responsive design"
-        ]
-    },
-    {
-        "name": "spa",
-        "list": [
-            "spa",
-            "single page app",
-            "single page applications",
-            "single-page application",
-            "single page application",
-            "single page"
-        ]
-    },
-    {
-        "name": "svn",
-        "list": [
-            "subversion",
-            "svn"
-        ]
-    },
-    {
-        "name": "gcp",
-        "list": [
-            "google cloud",
-            "g cloud",
-            "gcp"
-        ]
-    }
+  "zookeeper",
+  "hybrid mobile app",
+  "automated testing",
+  "high availability",
+  "google analytics",
+  "entity framework",
+  "micro-services",
+  "message queue",
+  "deep learning",
+  "auto scaling",
+  "coffeescript",
+  "instruments",
+  "codeigniter",
+  "illustrator",
+  "prometheus",
+  "blockchain",
+  "serverless",
+  "typescript",
+  "tensorflow",
+  "clickhouse",
+  "wireframe",
+  "prototype",
+  "container",
+  "wordpress",
+  "memcached",
+  "bitbucket",
+  "openstack",
+  "photoshop",
+  "hibernate",
+  "bluetooth",
+  "cocoapods",
+  "terraform",
+  "goroutine",
+  "firestore",
+  "big data",
+  "identity",
+  "selenium",
+  "semantic",
+  "material",
+  "markdown",
+  "rocketmq",
+  "electron",
+  "solidity",
+  "dynamodb",
+  "firebase",
+  "memcache",
+  "fastlane",
+  "retrofit",
+  "backbone",
+  "protobuf",
+  "carthage",
+  "fastapi",
+  "storage",
+  "cluster",
+  "next.js",
+  "firefox",
+  "xamarin",
+  "jetpack",
+  "grafana",
+  "webform",
+  "postman",
+  "eclipse",
+  "tableau",
+  "servlet",
+  "phalcon",
+  "flutter",
+  "mybatis",
+  "layabox",
+  "sidekiq",
+  "laravel",
+  "webpack",
+  "express",
+  "cypress",
+  "graphql",
+  "swagger",
+  "jenkins",
+  "ansible",
+  "signalr",
+  "pytorch",
+  "phaser",
+  "chrome",
+  "appium",
+  "jmeter",
+  "rxjava",
+  "webrtc",
+  "kanban",
+  "devops",
+  "dapper",
+  "arcgis",
+  "zeplin",
+  "liquid",
+  "struts",
+  "ibatis",
+  "gradle",
+  "sqlite",
+  "athena",
+  "lambda",
+  "tappay",
+  "apollo",
+  "tomcat",
+  "heroku",
+  "django",
+  "celery",
+  "apache",
+  "kotlin",
+  "hadoop",
+  "dagger",
+  "puppet",
+  "tolua",
+  "istio",
+  "realm",
+  "odata",
+  "ionic",
+  "cache",
+  "grunt",
+  "oauth",
+  "slack",
+  "toeic",
+  "figma",
+  "macos",
+  "shark",
+  "xcode",
+  "nosql",
+  "maven",
+  "egret",
+  "rspec",
+  "swift",
+  "rdbms",
+  "nginx",
+  "babel",
+  "webgl",
+  "mocha",
+  "shell",
+  "flask",
+  "azure",
+  "junit",
+  "kafka",
+  "spark",
+  "caffe",
+  "scala",
+  "laya",
+  "jstl",
+  "rust",
+  "grpc",
+  "yarn",
+  "lamp",
+  "bash",
+  "linq",
+  "json",
+  "mock",
+  "j2ee",
+  "jira",
+  "dapp",
+  "perl",
+  "gulp",
+  "cors",
+  "ajax",
+  "flux",
+  "nuxt",
+  "web3",
+  "jest",
+  "mvvm",
+  "mqtt",
+  "nats",
+  "dart",
+  "chef",
+  "jdbc",
+  "vim",
+  "cdn",
+  "dns",
+  "iis",
+  "etl",
+  "ios",
+  "ftp",
+  "cms",
+  "w3c",
+  "pwa",
+  "usb",
+  "gke",
+  "eks",
+  "cvs",
+  "pos",
+  "iot",
+  "elk",
+  "aop",
+  "ioc",
+  "xml",
+  "jsp",
+  "orm",
+  "bdd",
+  "db2",
+  "ood",
+  "mvp",
+  "seo",
+  "sns",
+  "dom",
+  "jwt",
+  "rds",
+  "npm",
+  "uml",
+  "lua",
+  "ddd",
+  "tdd",
+  "mvc",
+  "erp",
+  "sap",
+  "ses",
+  "dsp",
+  "ssl",
+  "yii",
+  "ble",
+  "ai",
+  "ef",
+  "d3",
+  "qt",
+  {
+    "name": "spring/spring mvc/spring cloud/spring boot",
+    "url": ["https://spring.io/"],
+    "list": [
+      "spring boot",
+      "springboot",
+      "spring data jpa",
+      "spring mvc",
+      "springmvc",
+      "spring cloud",
+      "springcloud",
+      "spring",
+      "jpa"
+    ]
+  },
+  {
+    "name": "aws/ec2/elb/s3/cloudwatch/fargate/ecs/ecr/sagemaker",
+    "url": ["https://aws.amazon.com/tw/"],
+    "list": [
+      "sagemaker",
+      "aws",
+      "ec2",
+      "elb",
+      "ecs",
+      "ecr",
+      "s3",
+      "fargate",
+      "cloudwatch",
+      "amazon web services",
+      "elastic load balancing",
+      "amazon sns",
+      "amazon"
+    ]
+  },
+  {
+    "name": "preprocessor/less/sass/scss",
+    "url": ["https://lesscss.org/", "https://sass-lang.com/"],
+    "list": ["preprocessor", "less", "sass", "scss"]
+  },
+  {
+    "name": "reactjs/redux/react native",
+    "url": [
+      "https://zh-hant.reactjs.org/",
+      "https://redux.js.org/",
+      "https://reactnative.dev/"
+    ],
+    "list": [
+      "react native",
+      "react-native",
+      "reactnative",
+      "redux",
+      "reactjs",
+      "react"
+    ]
+  },
+  {
+    "name": "elk/elasticsearch/kibana",
+    "url": ["https://www.elastic.co/"],
+    "list": ["elk", "elasticsearch", "elastic-search", "kibana", "elasticache"]
+  },
+  {
+    "name": "functional programming",
+    "url": [
+      "https://zh.wikipedia.org/wiki/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"
+    ],
+    "list": ["functional programming", "functional", "fp"]
+  },
+  {
+    "name": "server-side rendering",
+    "url": [
+      "https://zh.wikipedia.org/zh-tw/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%B8%B2%E6%9F%93"
+    ],
+    "list": ["server-side rendering", "ssr"]
+  },
+  {
+    "name": "css layout/grid/flex",
+    "url": [
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout"
+    ],
+    "list": ["grid", "flexbox", "flex"]
+  },
+  {
+    "name": "dependency injection",
+    "url": [
+      "https://zh.wikipedia.org/wiki/%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5"
+    ],
+    "list": ["dependency injection", "di"]
+  },
+  {
+    "name": "git/github/gitlab",
+    "url": [
+      "https://git-scm.com/",
+      "https://about.gitlab.com/",
+      "https://github.com/"
+    ],
+    "list": ["git flow", "github", "gitlab", "gitflow", "git"]
+  },
+  {
+    "name": "integration test",
+    "url": [
+      "https://zh.wikipedia.org/wiki/%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95"
+    ],
+    "list": ["integration test", "integration tests", "integrationtest"]
+  },
+  {
+    "name": "machine learning",
+    "list": ["machine learning", "ml"]
+  },
+  {
+    "name": "end-to-end test",
+    "list": [
+      "e2e test",
+      "end-to-end testing",
+      "end-to-end tests",
+      "end-to-end test",
+      "end-to-end"
+    ]
+  },
+  {
+    "name": "design patterns",
+    "list": ["design patterns", "design pattern", "設計模式"]
+  },
+  {
+    "name": "c# asp.net/core/entity framework/ado.net",
+    "list": [
+      "entityframework",
+      "entity framework",
+      "ado.net",
+      "visual c#",
+      "c#",
+      "asp.net core",
+      "asp .net",
+      ".net core",
+      ".netcore",
+      "asp.net",
+      ".net"
+    ]
+  },
+  {
+    "name": "load balancing",
+    "list": ["load balancing", "load balance"]
+  },
+  {
+    "name": "cocos/cocoapod",
+    "list": ["cocoapod", "cocos creator", "cocos"]
+  },
+  {
+    "name": "php/composer",
+    "list": ["php", "composer"]
+  },
+  {
+    "name": "shell script",
+    "list": ["shell script", "shell"]
+  },
+  {
+    "name": "microservice",
+    "list": [
+      "micro service",
+      "micro services",
+      "micro-service",
+      "microservice",
+      "microservices"
+    ]
+  },
+  {
+    "name": "multi-thread",
+    "list": ["multi-thread", "multithreading", "multithread", "multitasking"]
+  },
+  {
+    "name": "agile/scrum",
+    "list": ["agile", "scrum"]
+  },
+  {
+    "name": "restful api",
+    "list": ["restful api", "rest api", "restfulapi", "restful"]
+  },
+  {
+    "name": "ecma script",
+    "list": [
+      "ecma script",
+      "ecmascript",
+      "es2016",
+      "es2015",
+      "esnext",
+      "es5",
+      "es6",
+      "es3/6",
+      "es7",
+      "es8"
+    ]
+  },
+  {
+    "name": "cassandradb",
+    "list": ["cassandradb", "cassandra"]
+  },
+  {
+    "name": "objective-c",
+    "list": ["objective-c", "objective c", "object c"]
+  },
+  {
+    "name": "mssql/mysql",
+    "list": [
+      "oracle",
+      "mysql",
+      "microsoft sql",
+      "ms sqlserver",
+      "sql server",
+      "sqlserver",
+      "ms sql",
+      "ms tsql",
+      "mssql",
+      "ms-sql",
+      "msql",
+      "tsql",
+      "t-sql",
+      "sql"
+    ]
+  },
+  {
+    "name": "code review",
+    "list": ["codereviwe", "code review"]
+  },
+  {
+    "name": "tcp/udp/ip",
+    "list": ["tcp/ip", "tcp", "udp"]
+  },
+  {
+    "name": "javascript",
+    "url": ["https://developer.mozilla.org/zh-TW/docs/Web/JavaScript"],
+    "list": ["java script", "javascript"]
+  },
+  {
+    "name": "kubernetes",
+    "url": ["https://kubernetes.io/"],
+    "list": ["kubernetes", "k8s", "kubernate", "kuberenetes", "kubernates"]
+  },
+  {
+    "name": "clean code",
+    "list": ["clean code", "clean coding", "clean"]
+  },
+  {
+    "name": "unix/linux",
+    "list": ["unix", "linux"]
+  },
+  {
+    "name": "postgresql",
+    "list": ["postgresql", "postgres", "postgre", "postgesql"]
+  },
+  {
+    "name": "vuejs/vuex",
+    "list": ["vue", "vuejs", "vuex"]
+  },
+  {
+    "name": "ant design",
+    "list": ["ant design", "antd"]
+  },
+  {
+    "name": "rabbit mq",
+    "list": ["rabbit mq", "rabbitmq", "mq"]
+  },
+  {
+    "name": "angularjs",
+    "list": ["angular", "angularjs", "angular7"]
+  },
+  {
+    "name": "unit test",
+    "list": [
+      "unit testing",
+      "unit tests",
+      "unit test",
+      "unittest",
+      "unit-test",
+      "unit-testing",
+      "unit"
+    ]
+  },
+  {
+    "name": "bootstrap",
+    "list": ["bootstrap", "boostrap"]
+  },
+  {
+    "name": "maria db",
+    "list": ["mariadb", "maria db"]
+  },
+  {
+    "name": "thinkphp",
+    "list": ["thinkphp5", "thinkphp"]
+  },
+  {
+    "name": "three.js",
+    "list": ["three.js", "threejs"]
+  },
+  {
+    "name": "ruby/ror",
+    "list": ["ruby on rails", "ruby", "rails", "ror"]
+  },
+  {
+    "name": "english",
+    "list": ["english", "英文", "英語"]
+  },
+  {
+    "name": "android",
+    "list": ["android", "andriod", "andorid", "安卓"]
+  },
+  {
+    "name": "c/c\\+\\+",
+    "list": ["c/c\\+\\+", "vc\\+\\+", "c\\+\\+", "c 語言"]
+  },
+  {
+    "name": "unity3d",
+    "list": ["unity3d", "unity"]
+  },
+  {
+    "name": "mongodb",
+    "list": ["mongodb", "mongo", "mangodb"]
+  },
+  {
+    "name": "vb.net",
+    "list": ["vb.net", "vb"]
+  },
+  {
+    "name": "python",
+    "list": ["python3", "python"]
+  },
+  {
+    "name": "nodejs",
+    "list": ["nodejs", "node"]
+  },
+  {
+    "name": "golang",
+    "list": ["golang", "go"]
+  },
+  {
+    "name": "socket",
+    "list": ["web socket", "websocket", "socket.io", "socket"]
+  },
+  {
+    "name": "docker",
+    "list": ["docker", "docker compose", "docker-compose", "dockerfile"]
+  },
+  {
+    "name": "jquery",
+    "list": ["jquery", "jqeury"]
+  },
+  {
+    "name": "extjs",
+    "list": ["extjs", "ext js"]
+  },
+  {
+    "name": "redis",
+    "list": ["redis", "radis"]
+  },
+  {
+    "name": "java",
+    "list": ["java ee", "java"]
+  },
+  {
+    "name": "cicd",
+    "list": [
+      "continuous integration",
+      "continuous deployment",
+      "continuous delivery",
+      "ci",
+      "cd",
+      "ci/cd",
+      "cicd",
+      "ci",
+      "cd"
+    ]
+  },
+  {
+    "name": "html",
+    "list": ["h5", "html5", "xhtml", "html"]
+  },
+  {
+    "name": "oop",
+    "list": ["object oriented", "oop", "object-oriented", "物件導向"]
+  },
+  {
+    "name": "css",
+    "list": ["ｃｓｓ", "css3", "css"]
+  },
+  {
+    "name": "rwd",
+    "list": [
+      "rwd",
+      "responsive web design",
+      "responsive ui",
+      "responsive design"
+    ]
+  },
+  {
+    "name": "spa",
+    "list": [
+      "spa",
+      "single page app",
+      "single page applications",
+      "single-page application",
+      "single page application",
+      "single page"
+    ]
+  },
+  {
+    "name": "svn",
+    "list": ["subversion", "svn"]
+  },
+  {
+    "name": "gcp",
+    "list": ["google cloud", "g cloud", "gcp"]
+  }
 ]

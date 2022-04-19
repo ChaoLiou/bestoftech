@@ -4,8 +4,9 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs",
-    "build:crawler": "tsc ./build/crawler/index.ts",
-    "build:parser": "tsc ./build/parser/index.ts && node ./build/parser/index"
+    "build:crawle": "tsc ./build/crawler/index.ts && node ./build/crawler/index",
+    "build:parse": "tsc ./build/parser/index.ts && node ./build/parser/index",
+    "sort:techstack": "tsc ./build/parser/sortTechStack.ts && node ./build/parser/sortTechStack"
   },
   "devDependencies": {
     "nuxt3": "latest"
