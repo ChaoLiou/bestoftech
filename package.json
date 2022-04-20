@@ -6,7 +6,8 @@
     "start": "node .output/server/index.mjs",
     "build:crawle": "tsc ./build/crawler/index.ts && node ./build/crawler/index",
     "build:parse": "tsc ./build/parser/index.ts && node ./build/parser/index",
-    "sort:techstack": "tsc ./build/parser/sortTechStack.ts && node ./build/parser/sortTechStack"
+    "techstack:sort": "tsc ./build/parser/techStack/sorter.ts && node ./build/parser/techStack/sorter",
+    "techstack:generator": "tsc ./build/parser/techStack/generator.ts && node ./build/parser/techStack/generator"
   },
   "devDependencies": {
     "nuxt3": "latest"

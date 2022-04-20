@@ -16,4 +16,9 @@
   background-color: #1a1a1a;
   color: white;
 }
+main {
+  width: 80%;
+  margin: auto;
+  min-height: 100vh;
+}
 </style>

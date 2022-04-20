@@ -18,6 +18,7 @@ export interface ListItem {
   name: string;
   link: string;
   company: {
+    id: string;
     name: string;
     link: string;
     type: string;

@@ -5,7 +5,6 @@
   "high availability",
   "google analytics",
   "entity framework",
-  "micro-services",
   "message queue",
   "deep learning",
   "auto scaling",
@@ -177,43 +176,93 @@
   "w3c",
   "pwa",
   "usb",
-  "gke",
-  "eks",
   "cvs",
   "pos",
   "iot",
-  "elk",
-  "aop",
-  "ioc",
-  "xml",
-  "jsp",
-  "orm",
-  "bdd",
-  "db2",
-  "ood",
-  "mvp",
-  "seo",
-  "sns",
-  "dom",
-  "jwt",
-  "rds",
-  "npm",
-  "uml",
-  "lua",
-  "ddd",
-  "tdd",
-  "mvc",
-  "erp",
-  "sap",
-  "ses",
-  "dsp",
-  "ssl",
-  "yii",
-  "ble",
-  "ai",
-  "ef",
-  "d3",
-  "qt",
+  {
+    "name": "aop",
+    "url": [
+      "https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E5%88%87%E9%9D%A2%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"
+    ],
+    "list": ["aop"]
+  },
+  {
+    "name": "ioc",
+    "url": [
+      "https://zh.wikipedia.org/zh-tw/%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC"
+    ],
+    "list": ["ioc"]
+  },
+  {
+    "name": "xml",
+    "url": ["https://zh.wikipedia.org/zh-tw/XML"],
+    "list": ["xml"]
+  },
+  {
+    "name": "jsp",
+    "url": ["https://zh.wikipedia.org/zh-tw/JSP"],
+    "list": ["jsp"]
+  },
+  {
+    "name": "db2",
+    "url": ["https://www.ibm.com/tw-zh/analytics/db2"],
+    "list": ["db2"]
+  },
+  {
+    "name": "seo",
+    "url": [
+      "https://zh.wikipedia.org/zh-tw/%E6%90%9C%E5%B0%8B%E5%BC%95%E6%93%8E%E6%9C%80%E4%BD%B3%E5%8C%96"
+    ],
+    "list": ["seo"]
+  },
+  {
+    "name": "jwt",
+    "url": ["https://jwt.io/"],
+    "list": ["jwt"]
+  },
+  {
+    "name": "uml",
+    "url": [
+      "https://zh.wikipedia.org/zh-tw/%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80"
+    ],
+    "list": ["uml"]
+  },
+  {
+    "name": "lua",
+    "url": ["https://www.lua.org/"],
+    "list": ["lua"]
+  },
+  {
+    "name": "ddd/tdd/bdd",
+    "url": [
+      "https://zh.wikipedia.org/wiki/%E9%A0%98%E5%9F%9F%E9%A9%85%E5%8B%95%E8%A8%AD%E8%A8%88",
+      "https://zh.wikipedia.org/zh-tw/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91",
+      "https://zh.wikipedia.org/zh-tw/%E8%A1%8C%E4%B8%BA%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91"
+    ],
+    "list": ["tdd", "ddd"]
+  },
+  {
+    "name": "ssl",
+    "url": [
+      "https://zh.wikipedia.org/zh-tw/%E5%82%B3%E8%BC%B8%E5%B1%A4%E5%AE%89%E5%85%A8%E6%80%A7%E5%8D%94%E5%AE%9A"
+    ],
+    "list": ["ssl"]
+  },
+  {
+    "name": "Yii PHP framework",
+    "url": ["https://www.yiiframework.com"],
+    "list": ["yii"]
+  },
+  {
+    "name": "d3.js",
+    "url": ["https://d3js.org"],
+    "list": ["d3.js", "d3js", "d3"]
+  },
+  {
+    "name": "qt",
+    "url": ["https://www.qt.io"],
+    "list": ["qt"]
+  },
   {
     "name": "spring/spring mvc/spring cloud/spring boot",
     "url": ["https://spring.io/"],
@@ -230,9 +279,12 @@
     ]
   },
   {
-    "name": "aws/ec2/elb/s3/cloudwatch/fargate/ecs/ecr/sagemaker",
+    "name": "aws/ec2/elb/s3/cloudwatch/fargate/ecs/ecr/sagemaker/ses/rds/sns/eks",
     "url": ["https://aws.amazon.com/tw/"],
     "list": [
+      "eks",
+      "rds",
+      "ses",
       "sagemaker",
       "aws",
       "ec2",
@@ -245,13 +297,19 @@
       "amazon web services",
       "elastic load balancing",
       "amazon sns",
+      "sns",
       "amazon"
     ]
   },
   {
-    "name": "preprocessor/less/sass/scss",
-    "url": ["https://lesscss.org/", "https://sass-lang.com/"],
-    "list": ["preprocessor", "less", "sass", "scss"]
+    "name": "less",
+    "url": ["https://lesscss.org/"],
+    "list": ["less"]
+  },
+  {
+    "name": "sass/scss",
+    "url": ["https://sass-lang.com/"],
+    "list": ["sass", "scss"]
   },
   {
     "name": "reactjs/redux/react native",
@@ -321,6 +379,9 @@
   },
   {
     "name": "machine learning",
+    "url": [
+      "https://zh.wikipedia.org/zh-tw/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"
+    ],
     "list": ["machine learning", "ml"]
   },
   {
@@ -341,6 +402,7 @@
     "name": "c# asp.net/core/entity framework/ado.net",
     "list": [
       "entityframework",
+      "ef",
       "entity framework",
       "ado.net",
       "visual c#",
@@ -376,7 +438,8 @@
       "micro services",
       "micro-service",
       "microservice",
-      "microservices"
+      "microservices",
+      "micro-services"
     ]
   },
   {
@@ -392,8 +455,11 @@
     "list": ["restful api", "rest api", "restfulapi", "restful"]
   },
   {
-    "name": "ecma script",
+    "name": "javascript/ecma script",
+    "url": ["https://developer.mozilla.org/zh-TW/docs/Web/JavaScript"],
     "list": [
+      "javascript",
+      "java script",
       "ecma script",
       "ecmascript",
       "es2016",
@@ -440,11 +506,6 @@
   {
     "name": "tcp/udp/ip",
     "list": ["tcp/ip", "tcp", "udp"]
-  },
-  {
-    "name": "javascript",
-    "url": ["https://developer.mozilla.org/zh-TW/docs/Web/JavaScript"],
-    "list": ["java script", "javascript"]
   },
   {
     "name": "kubernetes",
@@ -540,8 +601,8 @@
     "list": ["python3", "python"]
   },
   {
-    "name": "nodejs",
-    "list": ["nodejs", "node"]
+    "name": "nodejs/npm",
+    "list": ["nodejs", "node", "npm"]
   },
   {
     "name": "golang",
@@ -586,12 +647,12 @@
     ]
   },
   {
-    "name": "html",
-    "list": ["h5", "html5", "xhtml", "html"]
+    "name": "html/dom",
+    "list": ["dom", "h5", "html5", "xhtml", "html"]
   },
   {
-    "name": "oop",
-    "list": ["object oriented", "oop", "object-oriented", "物件導向"]
+    "name": "oop/ood",
+    "list": ["ood", "object oriented", "oop", "object-oriented", "物件導向"]
   },
   {
     "name": "css",
@@ -622,7 +683,7 @@
     "list": ["subversion", "svn"]
   },
   {
-    "name": "gcp",
-    "list": ["google cloud", "g cloud", "gcp"]
+    "name": "gcp/gke",
+    "list": ["google cloud", "g cloud", "gcp", "gke"]
   }
 ]
