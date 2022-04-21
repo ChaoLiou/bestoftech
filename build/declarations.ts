@@ -9,17 +9,19 @@ export interface Params {
   detailPage?: PageParams;
 }
 
+export interface Company {
+  id: string;
+  name: string;
+  link: string;
+  type: string;
+}
+
 export interface ListItem {
   id: string;
   filePath: string;
   name: string;
   link: string;
-  company: {
-    id: string;
-    name: string;
-    link: string;
-    type: string;
-  };
+  company: Company;
   location: string;
   requirement: {
     experience: string;

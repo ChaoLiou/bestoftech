@@ -1,15 +1,25 @@
-import { defineStore, acceptHMRUpdate } from "pinia";
-import rankingJSON from "@/build/output/parsed/ranking.json";
+import { defineStore, acceptHMRUpdate } from 'pinia';
+import rankingJSON from '@/build/output/parsed/ranking.json';
+import allJobCompaniesJSON from '@/build/output/allCompanies.json';
+import allJobsJSON from '@/build/output/allJobs.json';
+import allJobDetailsJSON from '@/build/output/allJobDetails.json';
 
-export const useStore = defineStore("ranking", {
+export const useStore = defineStore('store', {
   state: () => {
     return {
-      list: rankingJSON.filter((x) => x.count > 2),
+      ranking: rankingJSON.filter((x) => x.count > 2),
+      companies: allJobCompaniesJSON,
+      jobs: allJobsJSON,
+      details: allJobDetailsJSON,
     };
   },
   actions: {},
 
-  getters: {},
+  getters: {
+    getCompany(state) {
+      return (id: string) => state.companies.find((x) => x.id === id);
+    },
+  },
 });
 
 if (import.meta.hot) {

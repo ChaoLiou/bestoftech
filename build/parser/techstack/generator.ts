@@ -1,11 +1,11 @@
-import * as fs from "fs";
-import { Job } from "../../declarations";
-import { distinct, readFileSync, writeFileSync } from "../../utils";
+import * as fs from 'fs';
+import { Job } from '../../declarations';
+import { distinct, readFileSync, writeFileSync } from '../../utils';
 import {
   ParsedJobGroupByCompany,
   TechStackGroupInterface,
   TechStackInterface,
-} from "./declarations";
+} from './declarations';
 
 interface UselessWords {
   matched: string[];
@@ -13,10 +13,10 @@ interface UselessWords {
 }
 
 const _uselesswords = readFileSync<UselessWords>(
-  "build/parser/uselesswords.json"
+  'build/parser/uselesswords.json'
 );
 const _techstackGroupsConfig = readFileSync<{ name: string; list: string[] }[]>(
-  "build/parser/techstackGroups.json"
+  'build/parser/techstackGroups.json'
 );
 
 const _foldername = `build/output/detail`;
@@ -26,23 +26,23 @@ const parseLine = (line: string) => {
   const regexp = /(\.?[a-z]+[\s\-0-9#]*\.?(\+{2})?)+/g;
   let matches = [];
   let output = [];
-  line = line.replace(/https?:\/\/[^\s$]+/, "");
+  line = line.replace(/https?:\/\/[^\s$]+/, '');
   while ((matches = regexp.exec(line))) {
-    let candidate = matches[0].replace(/\.$/g, "");
+    let candidate = matches[0].replace(/\.$/g, '');
     _uselesswords.contains.forEach(
       (words) =>
         (candidate = candidate.replace(
-          new RegExp(`(^|\\s)${words}(\\s|$)`, "g"),
-          " "
+          new RegExp(`(^|\\s)${words}(\\s|$)`, 'g'),
+          ' '
         ))
     );
     candidate = candidate.trim();
     _uselesswords.matched.forEach(
       (word) =>
-        (candidate = candidate.replace(new RegExp(`^${word}$`, "g"), ""))
+        (candidate = candidate.replace(new RegExp(`^${word}$`, 'g'), ''))
     );
     candidate = candidate.trim();
-    if (candidate.split(" ").length <= 3) {
+    if (candidate.split(' ').length <= 3) {
       const splitWithAndOr = candidate.split(/(^|\s)and\/or(\s|$)/);
       const splitWithAnd = candidate.split(/(^|\s)and(\s|$)/);
       const splitWithOr = candidate.split(/(^|\s)or(\s|$)/);
@@ -65,7 +65,7 @@ const parseLine = (line: string) => {
 
 const splitToLines = (...contents: string[]) =>
   contents
-    .map((content) => content.split("\n"))
+    .map((content) => content.split('\n'))
     .flat()
     .filter((line) => !!line.trim())
     .map((line) => line.toLowerCase());
@@ -88,8 +88,6 @@ const parseByJob = (job: Job) => {
       .filter((x) => !!x)
       .flat()
   );
-
-  // writeFileSync(`build/output/parsed/techstack/${id}.json`, distinctResult);
 
   return {
     id,
