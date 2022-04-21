@@ -1,10 +1,7 @@
 export interface Job {
   params: Params;
   listItem?: ListItem;
-  // detail?: Detail;
-  workContent: string;
-  otherRequirement: string;
-  welfare: string;
+  detail?: Detail;
 }
 
 export interface Params {

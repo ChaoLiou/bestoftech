@@ -1,8 +1,23 @@
 import * as fs from "fs";
 import { Job } from "../../declarations";
 import { distinct, readFileSync, writeFileSync } from "../../utils";
+import {
+  ParsedJobGroupByCompany,
+  TechStackGroupInterface,
+  TechStackInterface,
+} from "./declarations";
 
-const uselesswords = readFileSync<string[]>("build/parser/uselesswords.json");
+interface UselessWords {
+  matched: string[];
+  contains: string[];
+}
+
+const _uselesswords = readFileSync<UselessWords>(
+  "build/parser/uselesswords.json"
+);
+const _techstackGroupsConfig = readFileSync<{ name: string; list: string[] }[]>(
+  "build/parser/techstackGroups.json"
+);
 
 const _foldername = `build/output/detail`;
 const _filenames = fs.readdirSync(_foldername);
@@ -14,12 +29,17 @@ const parseLine = (line: string) => {
   line = line.replace(/https?:\/\/[^\s$]+/, "");
   while ((matches = regexp.exec(line))) {
     let candidate = matches[0].replace(/\.$/g, "");
-    uselesswords.forEach(
+    _uselesswords.contains.forEach(
       (words) =>
         (candidate = candidate.replace(
-          new RegExp(`(^|\\s)${words}(\\s|$)`),
-          ""
+          new RegExp(`(^|\\s)${words}(\\s|$)`, "g"),
+          " "
         ))
+    );
+    candidate = candidate.trim();
+    _uselesswords.matched.forEach(
+      (word) =>
+        (candidate = candidate.replace(new RegExp(`^${word}$`, "g"), ""))
     );
     candidate = candidate.trim();
     if (candidate.split(" ").length <= 3) {
@@ -50,10 +70,9 @@ const splitToLines = (...contents: string[]) =>
     .filter((line) => !!line.trim())
     .map((line) => line.toLowerCase());
 
-const parseJobContent = (job: Job) => {
+const parseByJob = (job: Job) => {
   const {
-    workContent,
-    otherRequirement,
+    detail: { workContent, otherRequirement },
     listItem: {
       id,
       company: { id: companyId, link },
@@ -62,56 +81,77 @@ const parseJobContent = (job: Job) => {
 
   const lines = splitToLines(workContent, otherRequirement);
   const result = lines.map(parseLine);
-  const result2 = result
-    .map((x) => x.techstack)
-    .filter((x) => !!x)
-    .flat();
 
-  const distinctResult = distinct(result2);
-  writeFileSync(`build/output/parsed/techstack/${id}.json`, distinctResult);
+  const distinctResult = distinct(
+    result
+      .map((x) => x.techstack)
+      .filter((x) => !!x)
+      .flat()
+  );
+
+  // writeFileSync(`build/output/parsed/techstack/${id}.json`, distinctResult);
 
   return {
     id,
     techstack: distinctResult,
     companyId: new URL(link).pathname.substring(9),
-    lines: result.map((x) => x.line).filter((x) => !!x),
   };
 };
 
-const result = _filenames
+const parsedJobs = _filenames
   .map((filename) => readFileSync<Job>(`${_foldername}/${filename}`))
-  .map(parseJobContent);
+  .map(parseByJob);
 
-const result2 = result.reduce((prev, curr) => {
-  const target = prev.find((x) => x.id === curr.companyId);
+const parsedJobsGroupByCompany = parsedJobs.reduce((prev, curr) => {
+  const target = prev.find((x) => x.companyId === curr.companyId);
   if (target) {
     target.techstack = distinct([...target.techstack, ...curr.techstack]);
   } else {
     prev.push({
-      id: curr.companyId,
+      companyId: curr.companyId,
       techstack: curr.techstack,
     });
   }
   return prev;
-}, []);
+}, [] as ParsedJobGroupByCompany[]);
 
-const groupResult = result2
-  .reduce((prev, curr) => {
-    curr.techstack.forEach((tech) => {
-      const target = prev.find((x) => x.name === tech);
-      if (target) {
-        target.ids.push(curr.id);
-      } else {
-        prev.push({ name: tech, ids: [curr.id] });
-      }
-    });
-    return prev;
-  }, [])
-  .map((x) => ({ ...x, count: x.ids.length }));
+const techStacks = parsedJobsGroupByCompany.reduce((prev, curr) => {
+  curr.techstack.forEach((tech) => {
+    const target = prev.find((x) => x.name === tech);
+    if (target) {
+      target.companyIds.push(curr.companyId);
+      target.count += 1;
+    } else {
+      prev.push({ name: tech, companyIds: [curr.companyId], count: 1 });
+    }
+  });
+  return prev;
+}, [] as TechStackInterface[]);
+
+const techStackGroups = techStacks.reduce((prev, curr) => {
+  const config = _techstackGroupsConfig.find((group) =>
+    group.list.includes(curr.name)
+  );
+  if (config) {
+    const target = prev.find((group) => group.name === config.name);
+    if (target) {
+      target.list.push(curr);
+      target.count += curr.count;
+    } else {
+      prev.push({ name: config.name, count: curr.count, list: [curr] });
+    }
+  } else {
+    prev.push({ name: curr.name, count: curr.count, list: [curr] });
+  }
+  return prev;
+}, [] as TechStackGroupInterface[]);
+
+const sortTechStackGroups = (source: TechStackGroupInterface[]) =>
+  source.sort((a, b) =>
+    b.count === a.count ? a.name.length - b.name.length : b.count - a.count
+  );
 
 writeFileSync(
-  `build/output/parsed/techstack/ranking.json`,
-  groupResult.sort((a, b) =>
-    b.count === a.count ? a.name.length - b.name.length : b.count - a.count
-  )
+  `build/output/parsed/ranking.json`,
+  sortTechStackGroups(techStackGroups)
 );

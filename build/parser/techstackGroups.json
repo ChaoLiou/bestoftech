@@ -1,0 +1,358 @@
+[
+  {
+    "name": "c#/asp.net/winform/entity framework/linq",
+    "list": [
+      "entity framework",
+      "asp.net web api",
+      "asp.net webform",
+      ".net framework",
+      "asp .net core",
+      "asp.net core",
+      "asp.net mvc",
+      ".net core 3",
+      "asp.net c#",
+      "asp.netapi",
+      ".net core",
+      "asp.net",
+      "ado.net",
+      "winform",
+      "c#.net",
+      "linq",
+      ".net",
+      "c#"
+    ]
+  },
+  {
+    "name": "relational database/stored procedure",
+    "list": ["stored procedure", "store procedure", "rdbms", "rdb"]
+  },
+  {
+    "name": "python/flask/pytorch/django",
+    "list": ["python3", "pytorch", "python", "django", "flask"]
+  },
+  {
+    "name": "ios/swift/objective-c/xcode",
+    "list": [
+      "ios developer",
+      "objective-c",
+      "ios sdk",
+      "ios app",
+      "ios ui",
+      "xcode",
+      "swift",
+      "obj-c",
+      "ios"
+    ]
+  },
+  {
+    "name": "javascript/ecma script",
+    "list": [
+      "javascript framework",
+      "java script",
+      "javascript",
+      "eslint",
+      "es6",
+      "es5",
+      "js"
+    ]
+  },
+  {
+    "name": "react.js/react native",
+    "list": [
+      "react testing library",
+      "react context",
+      "react native",
+      "react-native",
+      "react-router",
+      "react router",
+      "react hooks",
+      "reactnative",
+      "react hook",
+      "react.js",
+      "reactjs",
+      "redux",
+      "react"
+    ]
+  },
+  {
+    "name": "google cloud platform",
+    "list": ["google cloud platform", "gcp", "gke"]
+  },
+  {
+    "name": "responsive web design",
+    "list": [
+      "responsiveness of applications",
+      "responsive web design",
+      "responsive web",
+      "rwd"
+    ]
+  },
+  {
+    "name": "php/laravel/thinkphp",
+    "list": [
+      "php framework",
+      "php laravel",
+      "thinkphp5",
+      "laravel",
+      "php 7",
+      "php"
+    ]
+  },
+  {
+    "name": "ai/machine learning",
+    "list": ["machine learning", "ai"]
+  },
+  {
+    "name": "integration testing",
+    "list": [
+      "integration testing tools",
+      "integration testing",
+      "integration test",
+      "integration"
+    ]
+  },
+  {
+    "name": "scrum/agile/sprint",
+    "list": ["sprint", "scrum", "agile"]
+  },
+  {
+    "name": "restful api/ajax",
+    "list": [
+      "restful web api",
+      "restful apis",
+      "restful api",
+      "rest api",
+      "web api",
+      "restful",
+      "webapi",
+      "apis",
+      ".api",
+      "ajax",
+      "rest",
+      "api"
+    ]
+  },
+  {
+    "name": "android/kotlin",
+    "list": [
+      "android framework",
+      "android studio",
+      "android native",
+      "android app",
+      "android sdk",
+      "android",
+      "kotlin"
+    ]
+  },
+  {
+    "name": "design pattern",
+    "list": ["design patterns", "design pattern"]
+  },
+  {
+    "name": "ruby on rails",
+    "list": ["ruby on rails", "ruby"]
+  },
+  {
+    "name": "grpc/protobuf",
+    "list": ["protobuf", "grpc"]
+  },
+  {
+    "name": "message queue",
+    "list": ["message streaming platform", "message queue", "mq"]
+  },
+  {
+    "name": "unit testing",
+    "list": ["unit testing", "unit test", "unit"]
+  },
+  {
+    "name": "microservice",
+    "list": ["micro service", "microservices"]
+  },
+  {
+    "name": "java/spring",
+    "list": [
+      "spring boot framework",
+      "spring framework",
+      "spring security",
+      "spring cloud",
+      "spring boot",
+      "springboot",
+      "spring mvc",
+      "springmvc",
+      "java web",
+      "rxjava",
+      "spring",
+      ".java",
+      "java",
+      "j2ee",
+      "jsp"
+    ]
+  },
+  {
+    "name": "node.js/npm",
+    "list": ["node.js", "nodejs", "node", "npm"]
+  },
+  {
+    "name": "tdd/bdd/ddd",
+    "list": ["tdd", "bdd", "ddd"]
+  },
+  {
+    "name": "git/github",
+    "list": ["github flow", "git flow", "gitflow", "github", "git"]
+  },
+  {
+    "name": "linux/unix",
+    "list": ["unix-like", "linux", "unix"]
+  },
+  {
+    "name": "postgresql",
+    "list": ["postgresql", "postgres"]
+  },
+  {
+    "name": "kubernetes",
+    "list": ["kubernetes", "k8s"]
+  },
+  {
+    "name": "http/https",
+    "list": ["https", "http"]
+  },
+  {
+    "name": "tcp/udp/ip",
+    "list": ["tcp", "udp", "ip"]
+  },
+  {
+    "name": "mobile app",
+    "list": ["mobile app", "mobile web", "mobile"]
+  },
+  {
+    "name": "express.js",
+    "list": ["express.js", "express"]
+  },
+  {
+    "name": "sass/scss",
+    "list": ["sass", "scss"]
+  },
+  {
+    "name": "mvc/mvvm",
+    "list": ["mvvm", "mvc"]
+  },
+  {
+    "name": "mongo db",
+    "list": ["mongodb", "mongo"]
+  },
+  {
+    "name": "memcache",
+    "list": ["memcached", "memcache"]
+  },
+  {
+    "name": "database",
+    "list": ["database", "db"]
+  },
+  {
+    "name": "angular",
+    "list": ["angularjs", "angular 8", "angular2", "angular"]
+  },
+  {
+    "name": "graphql",
+    "list": ["graphql api", "graphql"]
+  },
+  {
+    "name": "docker",
+    "list": ["docker compose", "dockerfile", "container", "docker"]
+  },
+  {
+    "name": "vue.js",
+    "list": ["vue-router", "vue.js", "vuejs", "vue 3", "vuex", "vue"]
+  },
+  {
+    "name": "ms sql",
+    "list": [
+      "ms sql server",
+      "sql server",
+      "sqlserver",
+      "sql sever",
+      "ms sql",
+      "ms-sql",
+      "mssql",
+      "t-sql",
+      "tsql",
+      "sql"
+    ]
+  },
+  {
+    "name": "golang",
+    "list": ["golang", "go"]
+  },
+  {
+    "name": "gitlab",
+    "list": ["gitlab ci", "gitlab"]
+  },
+  {
+    "name": "ui/ux",
+    "list": ["ux designs", "uiux", "ui", "ux"]
+  },
+  {
+    "name": "ci/cd",
+    "list": [
+      "continuous integration",
+      "continuous delivery",
+      "cd tools",
+      "ci",
+      "cd"
+    ]
+  },
+  {
+    "name": "mysql",
+    "list": ["mysql"]
+  },
+  {
+    "name": "c/c++",
+    "list": ["c++", "c"]
+  },
+  {
+    "name": "unity",
+    "list": ["unity editor", "unity3d", "unity"]
+  },
+  {
+    "name": "ar/vr",
+    "list": ["ar", "vr"]
+  },
+  {
+    "name": "html",
+    "list": ["html5", "html", "dom", "h5"]
+  },
+  {
+    "name": "css",
+    "list": ["css3", "css"]
+  },
+  {
+    "name": "aws",
+    "list": [
+      "aws auto scaling",
+      "aws services",
+      "aws lambda",
+      "amazon aws",
+      "cloudwatch",
+      "sagemaker",
+      "fargate",
+      "aws",
+      "ec2",
+      "elb",
+      "ecs",
+      "ecr",
+      "ses",
+      "rds",
+      "sns",
+      "eks",
+      "s3"
+    ]
+  },
+  {
+    "name": "svn",
+    "list": ["subversion", "svn"]
+  },
+  {
+    "name": "oop",
+    "list": ["object oriented programming", "oop"]
+  }
+]

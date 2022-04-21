@@ -33,6 +33,7 @@ const updatePageSize = (event) => {
   <div class="pagination">
     <button
       type="button"
+      title="第一頁"
       :disabled="props.pageIndex === 1"
       @click="emit('update:page-index', 1)"
     >
@@ -40,31 +41,34 @@ const updatePageSize = (event) => {
     </button>
     <button
       type="button"
+      title="上一頁"
       :disabled="props.pageIndex === 1"
       @click="emit('update:page-index', props.pageIndex - 1)"
     >
       &lt;
     </button>
     <div class="info">
-      {{ itemIndexStart }} - {{ itemIndexEnd }} of {{ total }}
+      第 {{ itemIndexStart }} 筆 - 第 {{ itemIndexEnd }} 筆 (共 {{ total }} 筆)
     </div>
     <button
       type="button"
-      :disabled="!maxPageIndex || pageIndex === maxPageIndex"
+      title="下一頁"
+      :disabled="!maxPageIndex || props.pageIndex === maxPageIndex"
       @click="emit('update:page-index', props.pageIndex + 1)"
     >
       &gt;
     </button>
     <button
       type="button"
-      :disabled="!maxPageIndex || pageIndex === maxPageIndex"
+      title="最後一頁"
+      :disabled="!maxPageIndex || props.pageIndex === maxPageIndex"
       @click="emit('update:page-index', maxPageIndex)"
     >
       &gt;&gt;
     </button>
-    <select :value="pageSize" @change="updatePageSize">
+    <select v-model.number="props.pageSize" @change="updatePageSize">
       <option v-for="size in [30, 50, 100]" :key="size" :value="size">
-        {{ size }}
+        一頁 {{ size }} 筆
       </option>
     </select>
   </div>

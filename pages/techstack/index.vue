@@ -1,17 +1,9 @@
 <script lang="ts" setup>
-import ranking from "@/build/output/parsed/techstack/ranking.json";
+import { useStore } from "@/store";
 
-const source = ref(ranking.filter((x) => x.count > 1));
+const store = useStore();
+const source = ref(store.list);
 
-const wordLengthTags = source.value.reduce((prev, curr) => {
-  const words = curr.name.split(" ");
-  if (!prev.includes(words.length)) {
-    prev.push(words.length);
-  }
-  return prev;
-}, []);
-
-const tags = ref([]);
 const keyword = ref("");
 const pageIndex = ref(1);
 const pageSize = ref(30);
@@ -19,17 +11,13 @@ const opened = ref([]);
 
 const filteredSource = computed(() => {
   pageIndex.value = 1;
-  return source.value
-    .filter((x) => {
-      const keywords = keyword.value.split(",");
-      return keywords.length > 1
-        ? keywords.some((k) => !!k && x.name.includes(k))
-        : x.name.includes(keyword.value);
-    })
-    .filter((x) => {
-      const wordLength = x.name.split(" ").length;
-      return tags.value.length === 0 || tags.value.includes(wordLength);
-    });
+  return source.value.filter((x) => {
+    try {
+      return new RegExp(keyword.value).test(x.name);
+    } catch (error) {
+      return x.name.includes(keyword.value);
+    }
+  });
 });
 
 const pagedSource = computed(() => {
@@ -40,14 +28,6 @@ const pagedSource = computed(() => {
   );
 });
 
-const toggleTagInOut = (tag: string) => {
-  if (tags.value.includes(tag)) {
-    tags.value = tags.value.filter((t) => t !== tag);
-  } else {
-    tags.value.push(tag);
-  }
-};
-
 const toggleTechInOut = (tech: string) => {
   if (opened.value.includes(tech)) {
     opened.value = opened.value.filter((x) => x !== tech);
@@ -55,26 +35,23 @@ const toggleTechInOut = (tech: string) => {
     opened.value.push(tech);
   }
 };
+
+watch([pageIndex, pageSize], () => {
+  window.scrollTo(0, 0);
+});
 </script>
 
 <template>
   <div>
-    <h1>All Keywords</h1>
-    <div>
+    <div class="techstack">
+      <h1>所有關鍵字</h1>
       <div class="toolbar">
         <div class="filter">
-          <input v-model="keyword" class="search" />
-          <div class="tag-list">
-            <div
-              v-for="tag in wordLengthTags"
-              :key="tag"
-              class="tag-item"
-              :class="{ selected: tags.includes(tag) }"
-              @click="toggleTagInOut(tag)"
-            >
-              {{ tag }} word
-            </div>
-          </div>
+          <input
+            v-model="keyword"
+            class="search"
+            placeholder="篩選關鍵字;支援 RegExp"
+          />
         </div>
         <Pagination
           :total="filteredSource.length"
@@ -88,33 +65,69 @@ const toggleTechInOut = (tech: string) => {
           :key="index"
           class="tech-item"
         >
-          <div class="main-part" @click="toggleTechInOut(tech)">
-            <h3>{{ tech.name }}</h3>
+          <div class="visible-part" @click="toggleTechInOut(tech.name)">
+            <h3>
+              <NuxtLink
+                :to="{ name: 'techstack-tech', params: { tech: tech.name } }"
+              >
+                {{ tech.name }}
+              </NuxtLink>
+              <span v-if="tech.list.length > 1">({{ tech.list.length }})</span>
+            </h3>
             <h3>{{ tech.count }}</h3>
           </div>
-          <div v-show="opened.includes(tech)">
-            {{ tech.lines }}
+          <div
+            v-show="opened.includes(tech.name)"
+            class="invisible-part tech-item"
+          >
+            <div v-for="(item, index) in tech.list" :key="index">
+              <h5>{{ item.name }}</h5>
+              <h5>{{ item.count }}</h5>
+            </div>
           </div>
         </div>
       </div>
+      <div class="toolbar">
+        <div></div>
+        <Pagination
+          :total="filteredSource.length"
+          v-model:page-index="pageIndex"
+          v-model:page-size="pageSize"
+        />
+      </div>
     </div>
+    <NuxtChild></NuxtChild>
   </div>
 </template>
 
 <style scoped>
 .tech-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
 }
 .tech-item {
   background-color: #ffffff29;
 }
-.tech-item > .main-part {
-  padding: 1rem 2rem;
+.tech-item > * {
   display: flex;
   justify-content: space-between;
+}
+.tech-item > .visible-part {
+  padding: 1rem 2rem;
   cursor: pointer;
+}
+.visible-part span {
+  font-size: 0.5rem;
+}
+.tech-item > .invisible-part {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.5rem;
+  padding: 0.5rem;
+}
+.tech-item > .invisible-part > div {
+  background-color: #4d4d4d;
+  padding: 0.5rem 1rem;
 }
 .toolbar {
   display: flex;
@@ -126,29 +139,8 @@ const toggleTechInOut = (tech: string) => {
   align-items: center;
 }
 .search {
-  height: 2rem;
-}
-.tag-list {
-  display: flex;
-  width: 300px;
-  overflow: auto;
-}
-.tag-list > * {
-  margin-left: 1rem;
-}
-.tag-item {
-  border: 1px solid #ffffff;
-  background-color: #ffffff29;
-  opacity: 0.7;
   padding: 0 0.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-.tag-item:hover {
-  opacity: 1;
-}
-.tag-item.selected {
-  background-color: #ffffff;
-  color: #000000;
+  width: 300px;
+  height: 2rem;
 }
 </style>

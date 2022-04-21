@@ -7,14 +7,20 @@
     "build:crawle": "tsc ./build/crawler/index.ts && node ./build/crawler/index",
     "build:parse": "tsc ./build/parser/index.ts && node ./build/parser/index",
     "techstack:sort": "tsc ./build/parser/techStack/sorter.ts && node ./build/parser/techStack/sorter",
-    "techstack:generator": "tsc ./build/parser/techStack/generator.ts && node ./build/parser/techStack/generator"
+    "techstack:generate": "tsc ./build/parser/techStack/generator.ts && node ./build/parser/techStack/generator",
+    "fixdb": "tsc ./build/parser/fixdb.ts && node ./build/parser/fixdb",
+    "insert": "tsc ./build/parser/insert.ts && node ./build/parser/insert"
   },
   "devDependencies": {
     "nuxt3": "latest"
   },
   "dependencies": {
+    "@nuxtjs/composition-api": "^0.32.0",
+    "@pinia/nuxt": "^0.1.8",
+    "pinia": "^2.0.13",
     "puppeteer": "^13.5.2",
     "puppeteer-cluster": "^0.23.0",
+    "sqlite3": "^5.0.4",
     "typescript": "^4.6.3"
   }
 }
