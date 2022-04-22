@@ -1,6 +1,6 @@
-import * as fs from 'fs';
-import { Job } from '../declarations';
-import { readFileSync, writeFileSync } from '../utils';
+import * as fs from "fs";
+import { Job } from "../declarations";
+import { readFileSync, writeFileSync } from "../utils";
 
 const getJob = (job: Job) => {
   const { listItem } = job;

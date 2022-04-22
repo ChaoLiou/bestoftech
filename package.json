@@ -4,11 +4,10 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs",
-    "crawl": "tsc ./build/crawler/index.ts && node ./build/crawler/index",
-    "merge": "tsc ./build/parser/index.ts && node ./build/parser/index",
-    "sort": "tsc ./build/parser/techStack/sorter.ts && node ./build/parser/techStack/sorter",
-    "generate": "tsc ./build/parser/techStack/generator.ts && node ./build/parser/techStack/generator",
-    "insert": "tsc ./build/parser/insert.ts && node ./build/parser/insert"
+    "crawl": "tsc build/crawler/index.ts --outDir build/dist && node build/dist/crawler/index",
+    "merge": "tsc build/parser/index.ts --outDir build/dist && node build/dist/parser/index",
+    "sort": "tsc build/parser/techStack/sorter.ts --outDir build/dist && node build/dist/parser/sorter",
+    "generate": "tsc build/parser/techStack/generator.ts --build/dist && node build/dist/parser/generator"
   },
   "devDependencies": {
     "nuxt3": "latest"
